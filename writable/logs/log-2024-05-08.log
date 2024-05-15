@@ -1,0 +1,518 @@
+ERROR - 2024-05-08 08:37:29 --> mysqli_sql_exception: Table 'ci4.employee' doesn't exist in D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+#8 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(933): App\Controllers\Employee->index()
+#9 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+#10 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WE...')
+#15 {main}
+CRITICAL - 2024-05-08 08:37:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+[Method: GET, Route: employee]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:37:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:37:29 --> [Caused by] mysqli_sql_exception: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `employee`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+ERROR - 2024-05-08 08:38:04 --> mysqli_sql_exception: Table 'ci4.employee' doesn't exist in D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+#8 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(933): App\Controllers\Employee->index()
+#9 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+#10 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WE...')
+#15 {main}
+CRITICAL - 2024-05-08 08:38:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+[Method: GET, Route: employee]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:04 --> [Caused by] mysqli_sql_exception: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `employee`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+ERROR - 2024-05-08 08:38:05 --> mysqli_sql_exception: Table 'ci4.employee' doesn't exist in D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+#8 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(933): App\Controllers\Employee->index()
+#9 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+#10 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WE...')
+#15 {main}
+CRITICAL - 2024-05-08 08:38:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+[Method: GET, Route: employee]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:05 --> [Caused by] mysqli_sql_exception: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `employee`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+ERROR - 2024-05-08 08:38:05 --> mysqli_sql_exception: Table 'ci4.employee' doesn't exist in D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+#8 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(933): App\Controllers\Employee->index()
+#9 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+#10 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WE...')
+#15 {main}
+CRITICAL - 2024-05-08 08:38:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+[Method: GET, Route: employee]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:05 --> [Caused by] mysqli_sql_exception: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `employee`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+ERROR - 2024-05-08 08:38:50 --> mysqli_sql_exception: Table 'ci4.employee' doesn't exist in D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+#8 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(933): App\Controllers\Employee->index()
+#9 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+#10 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WE...')
+#15 {main}
+CRITICAL - 2024-05-08 08:38:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+[Method: GET, Route: employee]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:50 --> [Caused by] mysqli_sql_exception: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `employee`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+ERROR - 2024-05-08 08:38:51 --> mysqli_sql_exception: Table 'ci4.employee' doesn't exist in D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+#8 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(933): App\Controllers\Employee->index()
+#9 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+#10 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WE...')
+#15 {main}
+CRITICAL - 2024-05-08 08:38:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+[Method: GET, Route: employee]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:51 --> [Caused by] mysqli_sql_exception: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `employee`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+ERROR - 2024-05-08 08:38:51 --> mysqli_sql_exception: Table 'ci4.employee' doesn't exist in D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\app\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+#8 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(933): App\Controllers\Employee->index()
+#9 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+#10 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\SEMESTER4\WEB FRAMEWORK\APP\codeigniter4-framework\codeigniter4-framework\system\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WE...')
+#15 {main}
+CRITICAL - 2024-05-08 08:38:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+[Method: GET, Route: employee]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
+CRITICAL - 2024-05-08 08:38:51 --> [Caused by] mysqli_sql_exception: Table 'ci4.employee' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `employee`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `employee`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `employee`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Employee_model.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Employee.php(14): App\Models\Employee_model->getKaryawan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Employee->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employee))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\SEMESTER4\\WEB FRAMEWORK\\APP\\codeigniter4-framework\\codeigniter4-framework\\public\\index.php')
